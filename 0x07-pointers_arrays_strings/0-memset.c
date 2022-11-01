@@ -6,7 +6,6 @@
   * @s: string to modify
   * @b: character to fill string with
   * @n: number of bytes to fill
-  *desc: 
   * Return: modified string
   */
 
