@@ -2,7 +2,7 @@
 
 
 /**
-  * _memset - fill string with specific character to a limit
+  * *_memset - fill string with specific character to a limit
   * @s: string to modify
   * @b: character to fill string with
   * @n: number of bytes to fill
