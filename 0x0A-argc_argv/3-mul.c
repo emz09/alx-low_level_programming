@@ -2,12 +2,13 @@
 
 #include "main.h"
 
+#include <stdlib.h>
 
 /**
-  * main - print all arguments received
+  * main - multiply two numbers
   * @argc: number of arguments
-  * @argv: an array containing arguments
-  * Return: 0 (Success)
+  * @argv: array containing arguments
+  * Return: 0 (success)
   */
 
 
@@ -15,12 +16,25 @@ int main(int argc, char *argv[])
 
 {
 
-	int i;
+	int mul, i, j;
 
-	for (i = 0; i < argc; i++)
+	if (argc != 3)
 
-		printf("%s\n", argv[i]);
+	{
+
+		printf("Error\n");
+
+		return (1);
+
+	}
+
+	i = atoi(argv[1]);
+
+	j = atoi(argv[2]);
+
+	mul = i * j;
+
+	printf("%d\n", mul);
 
 	return (0);
-
 }
