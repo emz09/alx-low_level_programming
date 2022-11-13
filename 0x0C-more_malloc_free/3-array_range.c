@@ -5,35 +5,34 @@
 #include <stdlib.h>
 
 /**
-  * _calloc - allocates memory for an array
-  * @nmemb: number of elements in array
-  * @size: size of each element, in bytes
-  * Return: pointer to array, NULL on failure
+  * array_range - creates an array of integer
+  * @min: beginning number in array
+  * @max: end number in array
+  * Return: pointer to int array, NULL on failure
   */
 
-void *_calloc(unsigned int nmemb, unsigned int size)
+int *array_range(int min, int max)
 
 {
-	char *arr;
+	int *intarr;
 
-	unsigned int i = 0;
+	int i = 0, n;
 
-	if (nmemb <= 0 || size <= 0)
-
-		return (NULL);
-
-	arr = malloc(nmemb * size);
-
-	if (arr == NULL)
+	if (min > max)
 
 		return (NULL);
 
-	while (i < (nmemb * size))
+	intarr = malloc(((max - min) + 1) * sizeof(int));
+
+	if (intarr == NULL)
+
+		return (NULL);
+
+	for (n = min; n <= max; n++)
 
 	{
-		arr[i] = 0;
+		intarr[i] = n;
 		i++;
 	}
-
-	return (arr);
+	return (intarr);
 }
